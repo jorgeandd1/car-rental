@@ -1,21 +1,30 @@
 import { NextResponse } from "next/server";
-import { deleteCar, updateCar } from "../../../../lib/repos/carsRepo";
+import { updateCar, deleteCar } from "@/lib/repos/carsRepo";
 
-export async function PUT(_: Request, { params }: { params: { id: string } }) {
+// 👇 Importante: el 2º argumento debe ir tipado inline
+export async function PUT(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
   try {
-    return NextResponse.json(await updateCar(params.id, await _.json()));
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 400 });
+    const body = await req.json();
+    const car = await updateCar(params.id, body);
+    return NextResponse.json(car);
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : "Unknown error";
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }
+
 export async function DELETE(
-  _: Request,
+  _req: Request,
   { params }: { params: { id: string } }
 ) {
   try {
     await deleteCar(params.id);
     return NextResponse.json({ ok: true });
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 400 });
+  } catch (e: unknown) {
+    const msg = e instanceof Error ? e.message : "Unknown error";
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }
