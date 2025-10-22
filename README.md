@@ -40,7 +40,7 @@ Permite ver los autos disponibles, hacer reservas, calcular el total y mostrar q
 1️⃣ Clona el repositorio:
 ```bash
 git clone https://github.com/jorgeandd1/car-rental.git
-
+```
 
 2️⃣ Entra a la carpeta del proyecto:
 ```bash
