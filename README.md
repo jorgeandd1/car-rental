@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚗 RentACar — Prueba Técnica
 
-## Getting Started
+Aplicación web para gestionar el alquiler de carros.  
+Permite ver los autos disponibles, hacer reservas, calcular el total y mostrar qué usuario reservó cada auto.
 
-First, run the development server:
+---
 
+## 🌐 Enlaces
+
+- **Demo en Vercel:** [https://car-rental-wheat-two.vercel.app/](https://car-rental-wheat-two.vercel.app/)
+- **Repositorio GitHub:** [https://github.com/jorgeandd1/car-rental](https://github.com/jorgeandd1/car-rental)
+
+---
+
+## 💻 Tecnologías utilizadas
+
+- **Next.js 15**  
+- **TypeScript**  
+- **Tailwind CSS**  
+- **Supabase (Base de datos PostgreSQL)**  
+- **React Hook Form** y **Zod** (validaciones)  
+- **SWR** (actualización de datos en tiempo real)
+
+---
+
+## ⚙️ Funcionalidades principales
+
+- Listado de autos con imagen, precio y estado (disponible / no disponible).  
+- Reservar autos seleccionando fecha de inicio y fin.  
+- Cálculo automático del total (precio × días).  
+- Mostrar quién reservó el auto y las fechas.  
+- Validaciones si faltan fechas al reservar.  
+- CRUD de autos en módulo administrador.  
+- Despliegue automático con Vercel.
+
+---
+
+## 🧠 Cómo correr el proyecto en local
+
+1️⃣ Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jorgeandd1/car-rental.git
+
+
+2️⃣ Entra a la carpeta del proyecto:
+```bash
+cd car-rental
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3️⃣ Instala las dependencias:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4️⃣ Ejecuta el servidor local:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5️⃣ Abre en el navegador:
+http://localhost:3000
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👨‍💻 Autor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Jorge Durán
+Frontend Developer Jr.
+📍 Medellín, Colombia
+✉️ jorgeandd1@gmail.com
 
-## Deploy on Vercel
+🌐 LinkedIn: https://www.linkedin.com/in/jorge-andres-duran-cotamo-b761b61a1/?originalSubdomain=co
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
