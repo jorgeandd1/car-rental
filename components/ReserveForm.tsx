@@ -36,7 +36,7 @@ export default function ReserveForm({
   const [toastMsg, setToastMsg] = useState<string | null>(null);
   const showToast = (m: string) => {
     setToastMsg(m);
-    setTimeout(() => setToastMsg(null), 3500);
+    setTimeout(() => setToastMsg(null), 8000);
   };
 
   // helpers
